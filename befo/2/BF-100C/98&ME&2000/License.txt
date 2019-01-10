@@ -1,0 +1,21 @@
+
+Genesys Logic, INC. ("Genesys Logic ") Licenses the enclosed software to you only upon the condition that you accept all of the terms contained in this license agreement. Please read the terms carefully before opening this package or installing the software. 
+
+LICENSE AND WARRANTY:
+The software which accompanies this license (the "Software") is the property of Genesys Logic and is protected by copyright law. While Genesys Logic continues to own the Software, you will have certain rights to use the Software after your acceptance of the license agreement.
+
+* You may:
+(a) make one copy of the Software for archival purposes, or copy the software onto the hard disk of you computer and retain the original for archival purposes.
+
+* You may not:
+(a) copy the documentation which accompanies the Software.
+(b) sublicense, rent or lease any portion of the Software.
+(c) reverse engineer, decompile, disassemble, modify, translate, make any attempt to discover the source code of the Software, or create derivative works from the Software.
+
+* Limited Warranty:
+Genesys Logic warrants that the media on which the Software is distributed will be free from defects, and that the Software shall perform substantially as described in its documentation. 
+
+The above warranty is exclusive an in lieu of all other warranties, whether express or implied, including the implied warranties of merchantability, fitness for a particular purpose and noninfringement. This warranty gives you specific legal rights.
+
+The disclaimers and limitations set forth above will apply regardless of whether you accept the Software.
+

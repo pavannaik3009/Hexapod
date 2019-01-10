@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SerialRec">
+</Property><Property Name="Solution File" Value="E:\DESKBACKUP-12_11_15\C#\SerialRec\SerialRec.sln">
+</Property><Property Name="User Options File" Value="E:\DESKBACKUP-12_11_15\C#\SerialRec\SerialRec.suo">
+</Property><Property Name="Date" Value="Wednesday, December 23, 2015">
+</Property><Property Name="Time" Value="18:34 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="SerialRec.sln" Description="File successfully backed up as E:\DESKBACKUP-12_11_15\C#\SerialRec\Backup\SerialRec.sln">
+</Event><Event ErrorLevel="0" Project="" Source="SerialRec.suo" Description="File successfully backed up as E:\DESKBACKUP-12_11_15\C#\SerialRec\Backup\SerialRec.suo">
+</Event><Event ErrorLevel="0" Project="SerialRec" Source="SerialRec\SerialRec.csproj" Description="Project file successfully backed up as E:\DESKBACKUP-12_11_15\C#\SerialRec\Backup\SerialRec\SerialRec.csproj">
+</Event><Event ErrorLevel="0" Project="SerialRec" Source="SerialRec\Form1.cs" Description="File successfully backed up as E:\DESKBACKUP-12_11_15\C#\SerialRec\Backup\SerialRec\Form1.cs">
+</Event><Event ErrorLevel="0" Project="SerialRec" Source="SerialRec\Form1.Designer.cs" Description="File successfully backed up as E:\DESKBACKUP-12_11_15\C#\SerialRec\Backup\SerialRec\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="SerialRec" Source="SerialRec\Program.cs" Description="File successfully backed up as E:\DESKBACKUP-12_11_15\C#\SerialRec\Backup\SerialRec\Program.cs">
+</Event><Event ErrorLevel="0" Project="SerialRec" Source="SerialRec\Properties\AssemblyInfo.cs" Description="File successfully backed up as E:\DESKBACKUP-12_11_15\C#\SerialRec\Backup\SerialRec\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="SerialRec" Source="SerialRec\Properties\Resources.Designer.cs" Description="File successfully backed up as E:\DESKBACKUP-12_11_15\C#\SerialRec\Backup\SerialRec\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="SerialRec" Source="SerialRec\Properties\Settings.Designer.cs" Description="File successfully backed up as E:\DESKBACKUP-12_11_15\C#\SerialRec\Backup\SerialRec\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="SerialRec" Source="SerialRec\Properties\Settings.settings" Description="File successfully backed up as E:\DESKBACKUP-12_11_15\C#\SerialRec\Backup\SerialRec\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="SerialRec" Source="SerialRec\Form1.resx" Description="File successfully backed up as E:\DESKBACKUP-12_11_15\C#\SerialRec\Backup\SerialRec\Form1.resx">
+</Event><Event ErrorLevel="0" Project="SerialRec" Source="SerialRec\Properties\Resources.resx" Description="File successfully backed up as E:\DESKBACKUP-12_11_15\C#\SerialRec\Backup\SerialRec\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="SerialRec" Source="SerialRec\SerialRec.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SerialRec" Source="SerialRec\SerialRec.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="SerialRec.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="SerialRec.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SerialRec" Source="SerialRec\SerialRec.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

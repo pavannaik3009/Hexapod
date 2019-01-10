@@ -1,0 +1,35 @@
+C:\Documents and Settings\EMBEDDED\Desktop\C#\SerialRec\SerialRec\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\EMBEDDED\Desktop\C#\SerialRec\SerialRec\obj\Debug\SerialRec.Form1.resources
+C:\Documents and Settings\EMBEDDED\Desktop\C#\SerialRec\SerialRec\obj\Debug\SerialRec.Properties.Resources.resources
+C:\Documents and Settings\EMBEDDED\Desktop\C#\SerialRec\SerialRec\obj\Debug\SerialRec.csproj.GenerateResource.Cache
+C:\Documents and Settings\EMBEDDED\Desktop\C#\SerialRec\SerialRec\bin\Debug\SerialRec.exe
+C:\Documents and Settings\EMBEDDED\Desktop\C#\SerialRec\SerialRec\bin\Debug\SerialRec.pdb
+C:\Documents and Settings\EMBEDDED\Desktop\C#\SerialRec\SerialRec\obj\Debug\SerialRec.exe
+C:\Documents and Settings\EMBEDDED\Desktop\C#\SerialRec\SerialRec\obj\Debug\SerialRec.pdb
+E:\DESKBACKUP-12_11_15\C#\SerialRec\SerialRec\obj\Debug\SerialRec.exe
+E:\DESKBACKUP-12_11_15\C#\SerialRec\SerialRec\obj\Debug\SerialRec.pdb
+E:\DESKBACKUP-12_11_15\C#\SerialRec\SerialRec\bin\Debug\SerialRec.exe
+E:\DESKBACKUP-12_11_15\C#\SerialRec\SerialRec\bin\Debug\SerialRec.pdb
+E:\DESKBACKUP-12_11_15\C#\SerialRec\SerialRec\obj\Debug\SerialRec.csprojResolveAssemblyReference.cache
+E:\DESKBACKUP-12_11_15\C#\SerialRec\SerialRec\obj\Debug\SerialRec.Form1.resources
+E:\DESKBACKUP-12_11_15\C#\SerialRec\SerialRec\obj\Debug\SerialRec.Properties.Resources.resources
+E:\DESKBACKUP-12_11_15\C#\SerialRec\SerialRec\obj\Debug\SerialRec.csproj.GenerateResource.Cache
+D:\MyProjects\Vb And labview\C#,VB.net\C#\SerialRec\SerialRec\obj\Debug\SerialRec.exe
+D:\MyProjects\Vb And labview\C#,VB.net\C#\SerialRec\SerialRec\obj\Debug\SerialRec.pdb
+D:\MyProjects\Vb And labview\C#,VB.net\C#\GPS GSM\SerialRec\obj\Debug\SerialRec.exe
+D:\MyProjects\Vb And labview\C#,VB.net\C#\GPS GSM\SerialRec\obj\Debug\SerialRec.pdb
+D:\MyProjects\Vb And labview\C#,VB.net\C#\GPS GSM\SerialRec\obj\Debug\SerialRec.csprojResolveAssemblyReference.cache
+D:\MyProjects\Vb And labview\C#,VB.net\C#\GPS GSM\SerialRec\obj\Debug\SerialRec.Form1.resources
+D:\MyProjects\Vb And labview\C#,VB.net\C#\GPS GSM\SerialRec\obj\Debug\SerialRec.Properties.Resources.resources
+D:\MyProjects\Vb And labview\C#,VB.net\C#\GPS GSM\SerialRec\obj\Debug\SerialRec.csproj.GenerateResource.Cache
+D:\MyProjects\Vb And labview\C#,VB.net\C#\GPS GSM\SerialRec\bin\Debug\SerialRec.exe
+D:\MyProjects\Vb And labview\C#,VB.net\C#\GPS GSM\SerialRec\bin\Debug\SerialRec.pdb
+E:\jayaprasad\kit\16-17\NGP\ATMEGA\CEI-0072 RFID GSM GPS SCHOOL BUS\GPS GSM\SerialRec\obj\Debug\SerialRec.exe
+E:\jayaprasad\kit\16-17\NGP\ATMEGA\CEI-0072 RFID GSM GPS SCHOOL BUS\GPS GSM\SerialRec\obj\Debug\SerialRec.pdb
+E:\jayaprasad\kit\16-17\NGP\ATMEGA\CEI-0072 RFID GSM GPS SCHOOL BUS\GPS GSM\SerialRec\bin\Debug\SerialRec.exe
+E:\jayaprasad\kit\16-17\NGP\ATMEGA\CEI-0072 RFID GSM GPS SCHOOL BUS\GPS GSM\SerialRec\bin\Debug\SerialRec.pdb
+E:\jayaprasad\kit\16-17\NGP\ATMEGA\CEI-0072 RFID GSM GPS SCHOOL BUS\GPS GSM\SerialRec\obj\Debug\ResolveAssemblyReference.cache
+E:\jayaprasad\kit\16-17\NGP\ATMEGA\CEI-0072 RFID GSM GPS SCHOOL BUS\GPS GSM\SerialRec\obj\Debug\SerialRec.Form1.resources
+E:\jayaprasad\kit\16-17\NGP\ATMEGA\CEI-0072 RFID GSM GPS SCHOOL BUS\GPS GSM\SerialRec\obj\Debug\SerialRec.Properties.Resources.resources
+E:\jayaprasad\kit\16-17\NGP\ATMEGA\CEI-0072 RFID GSM GPS SCHOOL BUS\GPS GSM\SerialRec\obj\Debug\GenerateResource-ResGen.read.1.tlog
+E:\jayaprasad\kit\16-17\NGP\ATMEGA\CEI-0072 RFID GSM GPS SCHOOL BUS\GPS GSM\SerialRec\obj\Debug\GenerateResource-ResGen.write.1.tlog

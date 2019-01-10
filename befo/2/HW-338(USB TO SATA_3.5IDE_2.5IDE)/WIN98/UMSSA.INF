@@ -1,0 +1,68 @@
+[Version]
+Signature="$CHICAGO$"
+Class=hdc
+provider=%JM%
+
+[Manufacturer]
+"JMicron Tech."=JMicron
+
+[JMicron]
+%USB\VID_152D&PID_2338.DeviceDesc%=JM20338.install,USB\VID_152D&PID_2338
+%UMSS\DISK.DeviceDesc%=umsspdr.install,UMSS\DISK
+
+[PreCopySection]
+HKR,,NoSetupUI,,1
+
+[DestinationDirs]
+; \<WINDIR>\SYSTEM32\DRIVERS
+umss.files = 10,System32\Drivers
+
+; \<WINDIR>\SYSTEM\IOSUBSYS
+umsspdr.files = 12
+
+[JM20338.install]
+CopyFiles=umss.files, umsspdr.files
+AddReg=umss.addreg
+
+[umss.addreg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,UMSS.SYS
+
+
+; If the device does not correctly indicate which protocol it uses,
+; one of the following sections should be added to indicate which protocol
+; the driver should use.
+
+; Indicate that the device uses the BULK ONLY protocol
+[bulkonly.addreg.HW]
+HKR,,DeviceProtocol,0x10001,50
+
+; Install the port driver
+[umsspdr.install]
+AddReg=umsspdr.addreg
+
+[umsspdr.addreg]
+HKR,,DevLoader,,*ios
+HKR,,PortDriver,,umsspdr.pdr
+
+
+
+[umss.files]
+umss.sys
+
+[umsspdr.files]
+umsspdr.pdr
+
+[SourceDisksNames]
+1000 = "USB Mass Storage Driver Disk","",,
+
+[SourceDisksFiles]
+UMSS.SYS = 1000
+UMSSPDR.PDR = 1000
+
+;---------------------------------------------------------------;
+
+[Strings]
+JM="JMicron Tech."
+USB\VID_152D&PID_2338.DeviceDesc="JMicron SATA-USB Combo Device"
+UMSS\DISK.DeviceDesc="USB Mass Storage Device"

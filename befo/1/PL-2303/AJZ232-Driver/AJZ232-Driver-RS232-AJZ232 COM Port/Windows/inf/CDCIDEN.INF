@@ -1,0 +1,66 @@
+;--------------------------------------------------------------------------
+; Microsoft Windows USB Cable Setup File
+; Copyright (c) 1998 Microsoft Corporation
+; Copyright (c) 2004 Alcor Micro Corporation
+; Manufacturer: Microsoft Corporation
+; Manufacturer: Alcor Micro Corporation
+
+;--------------------------------------------------------------------------
+[Version]
+CatalogFile=usbcdc.cat
+Signature=$CHICAGO$
+Class=USB
+Provider=%Mfg%
+LayoutFile=layout.inf,layout1.inf,layout2.inf
+DriverVer=12/01/2004,1.00.01
+
+;--------------------------------------------------------------------------
+[SourceDiskNames]
+1=%DiskName%,,,
+
+[SourceDiskFiles]
+usbser.sys=1
+ccport.sys=1
+wdmmdmld.vxd=1
+
+[DestinationDirs]
+DefaultDestDir=10
+USB.Drvrs=10,SYSTEM32\DRIVERS
+USB.VxD=11
+
+;--------------------------------------------------------------------------
+[Manufacturer]
+%Mfg%=Models
+
+[Models]
+%AU9720% = AU9720, USB\VID_058F&PID_9720
+
+[AU9720]
+CopyFiles=AU9720.Drvrs,AU9720.VxD
+AddReg=AU9720.AddReg
+
+[AU9720.Drvrs]
+usbser.sys
+ccport.sys
+
+[AU9720.VxD]
+wdmmdmld.vxd
+
+[AU9720.AddReg]
+HKR,,DevLoader,0,*ntkern
+HKR,,NTMPDriver,,"usbser.sys,ccport.sys"
+
+[AU9720.HW]
+AddReg=AU9720AddReg.HW
+
+[AU9720AddReg.HW]
+HKR,,ChildID,2,"USB\AU9720"		;Point to mdmiden.inf
+
+[PreCopySection]
+HKR,,NoSetupUI,,1
+
+;--------------------------------------------------------------------------
+[Strings]
+Mfg	= "Alcor Micro, Corp."
+AU9720	= "AU9720 USB to UART" 
+DiskName= "Alcor Micro USB Cable Installation Disk"

@@ -1,0 +1,83 @@
+[Version]
+Signature="$CHICAGO$"
+Class=HDC
+provider=%MCS%
+
+[Manufacturer]
+%MfgName%=MysonCentury
+
+[MysonCentury]
+%USB\VID_04CF&PID_8810.DeviceDesc%=CS881X.install,USB\VID_04CF&PID_8810
+%USB\VID_04CF&PID_8811.DeviceDesc%=CS881X.install,USB\VID_04CF&PID_8811
+%USB\VID_04CF&PID_8813.DeviceDesc%=CS881X.install,USB\VID_04CF&PID_8813
+%USB\VID_04CF&PID_8818.DeviceDesc%=CS881X.install,USB\VID_04CF&PID_8818
+%USB\VID_04CF&PID_0800.DeviceDesc%=MTP800.install,USB\VID_04CF&PID_0800
+%MCUSBMS\DISK.DeviceDesc%=pdr.install,MCUSBMS\DISK
+
+[PreCopySection]
+HKR,,NoSetupUI,,1
+
+[DestinationDirs]
+wdm.files = 10,System32\Drivers       ; \<WINDIR>\SYSTEM32\DRIVERS
+pdr.files = 12                        ; \<WINDIR>\SYSTEM\IOSUBSYS
+
+[CS881X.install]
+CopyFiles=wdm.files, pdr.files
+AddReg=wdm.addreg
+
+[MTP800.install]
+CopyFiles=wdm.files, pdr.files
+AddReg=wdm.addreg
+
+[MTP800.install.HW]
+AddReg=cbi.addreg.HW
+
+[wdm.addreg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,MCUSBMS.SYS
+
+; Indicate that the device uses the C/B/I protocol
+[cbi.addreg.HW]
+HKR,,DeviceProtocol,0x10001,00
+
+; Indicate that the device uses the C/B protocol
+[cb.addreg.HW]
+HKR,,DeviceProtocol,0x10001,01
+
+; Indicate that the device uses the BULK ONLY protocol
+[bulkonly.addreg.HW]
+HKR,,DeviceProtocol,0x10001,50
+
+; Install the port driver
+[pdr.install]
+AddReg=pdr.addreg
+
+[pdr.addreg]
+HKR,,DevLoader,,*ios
+HKR,,PortDriver,,MCUSBMSP.PDR
+
+[wdm.files]
+MCUSBMS.SYS
+
+[pdr.files]
+MCUSBMSP.PDR
+
+[SourceDisksNames]
+1000 = "Myson-Century USB Mass Storage Driver Disk","",,
+
+[SourceDisksFiles]
+MCUSBMS.SYS = 1000
+MCUSBMSP.PDR = 1000
+
+;---------------------------------------------------------------;
+
+[Strings]
+MCS="Myson-Century"
+MfgName="Myson-Century"
+USB\VID_04CF&PID_8810.DeviceDesc="Myson-Century CS8810 USB Mass Storage Device"
+USB\VID_04CF&PID_8811.DeviceDesc="Myson-Century CS8811 USB Mass Storage Device"
+USB\VID_04CF&PID_8813.DeviceDesc="Myson-Century CS8813 USB Mass Storage Device"
+USB\VID_04CF&PID_8818.DeviceDesc="Myson-Century CS8818 USB Mass Storage Device"
+USB\VID_04CF&PID_0800.DeviceDesc="Myson-Century MTP800 USB Mass Storage Device"
+MCUSBMS\DISK.DeviceDesc="USB Mass Storage Device"
+

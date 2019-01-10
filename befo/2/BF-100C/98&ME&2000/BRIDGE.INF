@@ -1,0 +1,83 @@
+
+[Version]
+LayoutFile=Layout.inf, Layout1.inf, Layout2.inf
+signature="$CHICAGO$"
+Class=GeneLink
+ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+Compatible=1
+Provider=%Company%
+
+; =================== Table of content =========================
+
+[Manufacturer]
+%GenesysMfg%=GenesysLogic
+
+[GenesysLogic]
+%USB\VID_05E3&PID_0501.DeviceDesc%=Genesys.Device,USB\VID_05E3&PID_0501
+%USB\VID_05E3&PID_0502.DeviceDesc%=Genesys.Device,USB\VID_05E3&PID_0502
+
+[Genesys.Device]
+DelFiles=Genesys.DelList
+AddReg=GeneLink.AddReg
+CopyFiles=GeneLink.copy.sys32
+
+[Genesys.Device.NT]
+DelFiles=Genesys.NT.DelList
+AddReg=GeneLink.NT.AddReg
+CopyFiles=GeneLink.copynt.sys32
+
+
+[Genesys.Device.NT.Services]
+Addservice = USBHSB, 0x00000002, USBHSB.AddService
+
+[USBHSB.AddService]
+DisplayName    = %USBHSB.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 2                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\usbhsb.sys
+LoadOrderGroup = Base
+
+[GeneLink.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,usbhsb.sys
+
+[GeneLink.NT.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,usbhsb.sys
+
+[Genesys.Device.NT.Remove]
+DelFiles=Genesys.NT.DelList
+
+[GeneLink.copy.sys32]
+usbhsb.sys
+
+[GeneLink.copynt.sys32]
+usbhsb.sys
+
+[Genesys.DelList]
+usbhsb.sys,,,1
+
+[Genesys.NT.DelList]
+usbhsb.sys,,,1
+
+[DestinationDirs]
+DefaultDestDir=11               ; LDID_SYS
+GeneLink.copy.sys32=10,system32\drivers
+GeneLink.copynt.sys32 = 12      ; winnt\system32\drivers
+
+; =================== Generic ==================================
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[Strings]
+
+;Localizable
+Company="Genesys Logic"
+GenesysMfg="GenesysLogic"
+USB\VID_05E3&PID_0501.DeviceDesc="GeneLink File Transfer Driver"
+USB\VID_05E3&PID_0502.DeviceDesc="GeneLink File Transfer Driver"
+USBHSB.SvcDesc="GeneLink File Transfer Driver"
+
+

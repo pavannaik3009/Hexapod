@@ -1,0 +1,112 @@
+;----------------------------------------------------------------------------
+;	AU9720 USB to UART Bridge Controller Driver
+;	For Generic RS232 and Cellphone Cable
+;	Copyright (c) 2005, Alcor Micro, Corp.
+;----------------------------------------------------------------------------
+[Version]
+Signature="$Windows NT$"
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%ProviderName%
+DriverVer=12/01/2005,1.30.0.0
+
+;----------------------------------------------------------------------------
+;	Manufacturer and Product Information
+;----------------------------------------------------------------------------
+[ControlFlags]
+ExcludeFromSelect=USB\VID_058F&PID_9720
+ExcludeFromSelect=USB\VID_058F&PID_9721
+ExcludeFromSelect=USB\VID_058F&PID_9722
+
+[Manufacturer]
+%ProviderName%=DeviceList
+
+[DeviceList]
+%ALCORMICRO_CDC%=Hornet,USB\VID_058F&PID_9720
+%ALCORMICRO_CDC%=Hornet,USB\VID_058F&PID_9721
+%ALCORMICRO_CDC%=Hornet,USB\VID_058F&PID_9722
+
+;----------------------------------------------------------------------------
+;	File Source and Destination
+;----------------------------------------------------------------------------
+[DestinationDirs]
+DefaultDestDir=10
+Hornet.NT.CopyFiles=10,system32\drivers
+
+[SourceDisksFiles]
+usbser.sys=1
+softctrl.sys=1
+
+[SourceDisksNames]
+1=%INSTDISK%,,,
+
+;----------------------------------------------------------------------------
+;	Windows 2000 Sections
+;----------------------------------------------------------------------------
+[Hornet.NT]
+CopyFiles=Hornet.NT.CopyFiles
+AddReg=Hornet.NT.AddReg,Hornet.NT.Utility.AddReg
+
+;----------------------------------------------------------------------------
+[Hornet.NT.CopyFiles]
+usbser.sys,,,0x00000004
+softctrl.sys,,,0x00000004
+
+;----------------------------------------------------------------------------
+[Hornet.NT.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,usbser.sys
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[Hornet.NT.Utility.AddReg]
+HKLM,%UtilityKey%,SkipWHQL,0x00010001,1
+
+;----------------------------------------------------------------------------
+[Hornet.NT.Services]
+AddService = usbser,0x00000002,UsbSerService
+AddService = softctrl,0x00000000,SoftCtrlService
+AddService = serenum,0x00000000,SerEnumService
+
+[UsbSerService]
+DisplayName    = %UsbSer.SvcDesc%
+ServiceType    = 1                       ;SERVICE_KERNEL_DRIVER
+StartType      = 3                       ;SERVICE_DEMAND_START
+ErrorControl   = 1                       ;SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\usbser.sys
+LoadOrderGroup = Base
+
+[SoftCtrlService]
+DisplayName    = %SoftCtrl.SvcDesc%
+ServiceType    = 1                       ;SERVICE_KERNEL_DRIVER
+StartType      = 3                       ;SERVICE_DEMAND_START
+ErrorControl   = 1                       ;SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\softctrl.sys
+LoadOrderGroup = PNP Filter
+
+[SerEnumService]
+DisplayName    = %SerEnum.SvcDesc%
+ServiceType    = 1                       ;SERVICE_KERNEL_DRIVER
+StartType      = 3                       ;SERVICE_DEMAND_START
+ErrorControl   = 1                       ;SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\serenum.sys
+LoadOrderGroup = PNP Filter
+
+;----------------------------------------------------------------------------
+[Hornet.NT.HW]
+AddReg=Hornet.NT.HW.AddReg
+
+[Hornet.NT.HW.AddReg]
+HKR,,"UpperFilters",0x00010000,"softctrl"
+HKR,,"UpperFilters",0x00010008,"serenum"
+
+;----------------------------------------------------------------------------
+;	String Definitions
+;----------------------------------------------------------------------------
+[Strings]
+ProviderName="TGEAR, Corp."
+ALCORMICRO_CDC="AQF232 COM Port "
+INSTDISK="Driver Installation Disc"
+UsbSer.SvcDesc="USB Modem Driver"
+SerEnum.SvcDesc="Serial Port Enumerator"
+SoftCtrl.SvcDesc="Software Flow Control Driver"
+UtilityKey="SOFTWARE\AlcorMicro\AU9720"
